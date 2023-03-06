@@ -10,10 +10,11 @@ WORKDIR /um
 #RUN apt install build-essential libssl-dev pkg-config cmake -y
 RUN git clone https://github.com/broomshed/musical-umbrella
 #COPY . .
-RUN curl https://sh.rustup.rs -sSf | sh -s -- -y --default-toolchain stable
-RUN source "$HOME/.cargo/env"
+RUN curl https://sh.rustup.rs -sSf | sh -s -- --default-toolchain nightly -y
+#RUN source "$HOME/.cargo/env"
 ENV PATH="/root/.cargo/bin:$PATH"
 
+WORKDIR /um/musical-umbrella
 RUN export TELOXIDE_TOKEN=<TOKEN>
 
 CMD ["cargo", "run", "--release"]
