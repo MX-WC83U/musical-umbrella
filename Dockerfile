@@ -11,6 +11,7 @@ WORKDIR /um
 RUN git clone https://github.com/broomshed/musical-umbrella
 #COPY . .
 RUN curl https://sh.rustup.rs -sSf | sh -s -- -y --default-toolchain stable
+RUN source "$HOME/.cargo/env"
 ENV PATH="/root/.cargo/bin:$PATH"
 
 RUN export TELOXIDE_TOKEN=<TOKEN>
