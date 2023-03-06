@@ -15,8 +15,8 @@ RUN cd musical-umbrella && cargo build --release
 
 FROM debian:11-slim
 
-COPY --from=build /root/musical-umbrella/src/target/release
- /usr/local/bin
+COPY --from=build /root/musical-umbrella/src/target/release /usr/local/bin
+
 
 WORKDIR /usr/local/bin
 CMD ["./main"]
