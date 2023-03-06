@@ -1,7 +1,7 @@
 #FROM rust:1.67      
 #FROM debian:11-slim
 FROM alpine:latest
-RUN apk add build-essential libssl-dev pkg-config cmake git curl
+#RUN apk add build-essential libssl-dev pkg-config cmake git curl
 
 WORKDIR /um
 #RUN apt update && apt upgrade -y
