@@ -1,4 +1,4 @@
-FROM debian:11
+FROM debian:11-slim
 RUN apt update && apt upgrade -y
 RUN apt install build-essential libssl-dev pkg-config cmake -y
 
