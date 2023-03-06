@@ -1,4 +1,5 @@
-FROM rust:1.67       #FROM debian:11-slim
+FROM rust:1.67      
+#FROM debian:11-slim
 #RUN apt update && apt upgrade -y
 #RUN apt install build-essential libssl-dev pkg-config cmake -y
 
