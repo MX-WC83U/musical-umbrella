@@ -1,9 +1,18 @@
 FROM rust:1.67 as builder
+WORKDIR /um
+
 RUN apt-get update && \
     apt-get dist-upgrade -y && \
     apt-get install -y musl-tools && \
-	      apt-get install -y libssl-dev && \
-      	apt-get install -y sqlite3 && \
-	      apt-get install -y pkg-config && \
-        rustup target add x86_64-unknown-linux-musl
+	apt-get install -y libssl-dev && \
+	apt-get install -y sqlite3 && \
+	apt-get install -y pkg-config && \
+    rustup target add x86_64-unknown-linux-musl
+
+
+
+
+	
+
+
 
